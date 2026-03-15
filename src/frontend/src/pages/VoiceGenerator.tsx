@@ -13,6 +13,7 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { Textarea } from "@/components/ui/textarea";
 import { useCredits } from "@/hooks/useCredits";
+import { API_BASE, API_KEY } from "@/lib/apiConfig";
 import { addHistory } from "@/lib/history";
 import {
   AlertCircleIcon,
@@ -23,9 +24,6 @@ import {
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "sonner";
-
-const API_BASE = "https://agentrouter.org/v1";
-const API_KEY = "DEMO_KEY";
 
 const VOICES = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"] as const;
 type Voice = (typeof VOICES)[number];

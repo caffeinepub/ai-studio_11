@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Textarea } from "@/components/ui/textarea";
 import { useCredits } from "@/hooks/useCredits";
+import { API_BASE, API_KEY } from "@/lib/apiConfig";
 import { addHistory } from "@/lib/history";
 import { cn } from "@/lib/utils";
 import {
@@ -18,9 +19,6 @@ import {
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-
-const API_BASE = "https://agentrouter.org/v1";
-const API_KEY = "DEMO_KEY";
 
 interface Message {
   id: string;
